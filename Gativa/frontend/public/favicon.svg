@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Rounded Brand Container -->
+  <rect width="48" height="48" rx="10" fill="#0A1145"/>
+  <!-- Saffron Motion Arc -->
+  <path d="M24 10C16.268 10 10 16.268 10 24s6.268 14 14 14c5.8 0 10.79-3.52 12.92-8.5" stroke="#FF9933" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Velocity Line & Signal Node -->
+  <path d="M22 24h13" stroke="#138808" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="35" cy="24" r="3" fill="#138808"/>
+  <path d="M19 19l5 5-5 5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
