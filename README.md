@@ -1,4 +1,4 @@
-# 🚦 Gativa — Smart Traffic Analysis, Infrastructure Recommendation & SUMO Simulation Platform
+# 🚦 — Smart Traffic Analysis, Infrastructure Recommendation & SUMO Simulation Platform
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.115+-009688.svg?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20TypeScript-61DAFB.svg?style=flat-square&logo=react&logoColor=black)](https://react.dev)
