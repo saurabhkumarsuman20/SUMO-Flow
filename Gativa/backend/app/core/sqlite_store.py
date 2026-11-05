@@ -7,15 +7,26 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import sqlite3
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
 logger = logging.getLogger(__name__)
 
-# Locate database path in backend/data/gativa.db
-DB_DIR = Path(__file__).resolve().parent.parent.parent / "data"
+# Locate database path.
+# - Local: backend/data/gativa.db
+# - Vercel (read-only filesystem): system temp dir (e.g. /tmp/gativa/gativa.db)
+# - Override anywhere with the GATIVA_DATA_DIR environment variable.
+_LOCAL_DB_DIR = Path(__file__).resolve().parent.parent.parent / "data"
+if os.environ.get("GATIVA_DATA_DIR"):
+    DB_DIR = Path(os.environ["GATIVA_DATA_DIR"])
+elif os.environ.get("VERCEL"):
+    DB_DIR = Path(tempfile.gettempdir()) / "gativa"
+else:
+    DB_DIR = _LOCAL_DB_DIR
 DB_PATH = DB_DIR / "gativa.db"
 
 
@@ -313,4 +324,3 @@ def reset_candidate_decisions_sync(analysis_id: str) -> None:
             (analysis_id,),
         )
         conn.commit()
-
