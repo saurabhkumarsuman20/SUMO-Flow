@@ -451,7 +451,7 @@ Before installing Gativa locally, ensure the following tools are available:
 
 ### Step 1: Clone Repository
 ```powershell
-git clone https://github.com/Sujalkan07/Gativa.git
+git clone https://github.com/S/Gativa.git](https://github.com/saurabhkumarsuman20/SUMO-Flow
 cd Gativa
 ```
 
